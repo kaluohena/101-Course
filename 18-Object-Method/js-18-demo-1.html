@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object.keys, values, entries</title>
+    <script>
+      let user = {
+        name: 'John',
+        age: 30,
+      };
+      Object.keys(user).forEach((key) => alert(key)); // ?
+      Object.values(user).forEach((value) => alert(value)); // ?
+      Object.entries(user).forEach((entry) => console.log(entry)); // ?
+
+      for (const [key, value] of Object.entries(object1)) {
+        console.log(`${key}: ${value}`);
+      }
+    </script>
+  </head>
+
+  <body></body>
+</html>
