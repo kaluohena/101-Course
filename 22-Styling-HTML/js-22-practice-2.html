@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Searching</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <body>
+      <div>
+        <form action="#" onsubmit="handleSubmit()">
+          <div class="label">
+            Input three numbers that you think is the wrong colour
+          </div>
+          <input id="numInput" type="number" /><br />
+          <input type="submit" value="Submit" />
+        </form>
+        <table id="table">
+          <tr>
+            <td data="1"></td>
+            <td data="2"></td>
+            <td data="3"></td>
+          </tr>
+          <tr>
+            <td data="4"></td>
+            <td data="5"></td>
+            <td data="6"></td>
+          </tr>
+          <tr>
+            <td data="7"></td>
+            <td data="8"></td>
+            <td data="9"></td>
+          </tr>
+        </table>
+        <div id="congrats-page"></div>
+      </div>
+
+      <script>
+        /*
+          1. When user input 368 update the style of cell 3, 5, 8 to the following:
+            for cell 3 update its image to number-3_Down.png and background color to #d48107.
+            for cell 6 update its image to number-6_Down.png and background color to #4a05a6.
+            for cell 8 update its image to number-8_Down.png and background color to #513930.
+
+          2. Show the congrats page after 1s(setTimeout()). Class congrats specify the style of congrats page and is in style.css already.
+        */
+        const cells = document.getElementsByTagName('td');
+        const numInput = document.getElementById('numInput');
+        const bodyCover = /* Get the div with id "congrats-page" */
+        const correctInput = '368';
+        const downColors = {
+          num3: '#d48107',
+          num6: '#4a05a6',
+          num8: '#513930',
+        };
+
+        function handleSubmit() {
+          if (numInput.value === correctInput) {
+            for (const cell of cells) {
+              /* Your code goes here */
+            }
+
+            setTimeout(() => {
+              /* Show the congrats page */
+            }, 2000);
+          }
+        }
+      </script>
+    </body>
+  </body>
+</html>

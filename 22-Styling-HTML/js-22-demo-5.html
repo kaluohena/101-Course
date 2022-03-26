@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Changing HTML</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        color: white;
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: cadetblue">
+    The red text
+    <script>
+      alert(document.body.style.color); // empty
+      alert(document.body.style.marginTop); // empty
+      alert(document.body.style.display); // empty
+      alert(document.body.style.backgroundColor); // cadetblue
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Changing HTML</title>
+    <style>
+      body {
+        color: white;
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: cadetblue">
+    The red text
+    <script>
+      let style = getComputedStyle(document.body);
+      alert(style.margin); // empty string in Firefox
+    </script>
+  </body>
+</html>

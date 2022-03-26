@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Searching</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <body>
+      <div>
+        <form action="#" onsubmit="handleSubmit()">
+          <div class="label">
+            Input three numbers that you think is the wrong colour
+          </div>
+          <input id="numInput" type="number" /><br />
+          <input type="submit" value="Submit" />
+        </form>
+        <table id="table">
+          <tr>
+            <td id="1"><img src="assets/number-1.png" width="100" /></td>
+            <td id="2"><img src="assets/number-2.png" width="100" /></td>
+            <td id="3" class="wrong-num">
+              <img src="assets/number-3.png" width="100" />
+            </td>
+          </tr>
+          <tr>
+            <td id="4"><img src="assets/number-4.png" width="100" /></td>
+            <td id="5"><img src="assets/number-5.png" width="100" /></td>
+            <td id="6" class="wrong-num">
+              <img src="assets/number-6.png" width="100" />
+            </td>
+          </tr>
+          <tr>
+            <td id="7"><img src="assets/number-7.png" width="100" /></td>
+            <td id="8" test="test">
+              <img src="assets/number-8.png" width="100" />
+            </td>
+            <td id="9"><img src="assets/number-9.png" width="100" /></td>
+          </tr>
+        </table>
+      </div>
+
+      <script>
+        // When user input 368 not only change the background color to light grey but also displayed the red cross image.
+        const cells = document.getElementsByTagName('td');
+        const numInput = document.getElementById('numInput');
+        const correctInput = '368';
+
+        function handleSubmit() {
+          if (numInput.value === correctInput) {
+            for (const cell of cells) {
+              /* Your code goes here */
+            }
+          }
+        }
+      </script>
+    </body>
+  </body>
+</html>

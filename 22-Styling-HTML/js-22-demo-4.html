@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Changing HTML</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="main page">
+    <div
+      id="block"
+      style="
+        width: 400px;
+        height: 400px;
+        background-color: cadetblue;
+        color: white;
+        font-size: 30px;
+      "
+    >
+      Block
+    </div>
+    <script>
+      const block = document.getElementById('block');
+      block.style.margin = 20;
+      alert(block.style.margin); // '' (empty string, the assignment is ignored)
+
+      // now add the CSS unit (px) - and it works
+      // block.style.margin = '20px';
+      // alert(block.style.margin); // 20px
+
+      // alert(block.style.marginTop); // 20px
+      // alert(block.style.marginLeft); // 20px
+    </script>
+  </body>
+</html>

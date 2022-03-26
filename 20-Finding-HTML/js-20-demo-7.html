@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Searching</title>
+  </head>
+  <body>
+    <h1>The Document Object</h1>
+    <h2>The querySelectorAll() Method</h2>
+
+    <p>Add a background color to the first p element with class="example":</p>
+
+    <h2 class="example">A heading</h2>
+    <p class="example">A paragraph.</p>
+    <p class="example">A paragraph.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      const elements = document.querySelectorAll('p.example');
+      elements[0].style.backgroundColor = 'red';
+      document.getElementById('demo').innerHTML = elements.length;
+    </script>
+  </body>
+</html>
