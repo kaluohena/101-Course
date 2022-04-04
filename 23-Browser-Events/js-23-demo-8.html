@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Browser Events</title>
+  </head>
+
+  <body>
+    <button
+      onmousedown="logMouse(event)"
+      onmouseup="logMouse(event)"
+      onclick="logMouse(event)"
+    >
+      Click Me</button
+    ><br />
+    <textarea id="log-area" style="height: 200px; margin-top: 20px"></textarea>
+
+    <script>
+      const logArea = document.getElementById('log-area');
+
+      function logMouse(event) {
+        const prevLog = logArea.innerHTML;
+        logArea.innerHTML = prevLog + event.type + '\n';
+      }
+    </script>
+  </body>
+</html>

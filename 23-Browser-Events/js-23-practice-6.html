@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Events</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background: url('../assets/kitchen.jpg') center/100% no-repeat;
+      }
+
+      img {
+        cursor: pointer;
+      }
+
+      .lemon {
+        position: absolute;
+        left: 200px;
+        top: 600px;
+      }
+
+      .lemon_grey {
+        position: absolute;
+        left: 192px;
+        top: 595px;
+      }
+
+      .vinegar {
+        position: absolute;
+        right: 240px;
+        top: 587px;
+      }
+
+      .vinegar_grey {
+        position: absolute;
+        right: 234px;
+        top: 581px;
+      }
+    </style>
+  </head>
+  <body onclick="handleClick(event)">
+    <img class="lemon_grey" src="../assets/lemon_grey.png" width="165" />
+    <img
+      class="lemon"
+      src="../assets/lemon.png"
+      width="150"
+      onmouseover="handleLemonMouseOver(event)"
+      onmouseout="handleLemonMouseOut(event)"
+    />
+
+    <img src="../assets/apple_grey.png" width="90" />
+    <img src="../assets/apple.png" width="80" />
+
+    <img
+      class="vinegar_grey"
+      src="../assets/vinegar_grey.png"
+      width="62"
+      height="134"
+    />
+    <img
+      class="vinegar"
+      src="../assets/vinegar.png"
+      width="50"
+      onmouseover="handleVinegarMouseOver(event)"
+      onmouseout="handleVinegarMouseOut(event)"
+    />
+
+    <img src="../assets/salt_grey.png" width="70" height="101" />
+    <img src="../assets/salt.png" width="60" />
+
+    <script>
+      /* 
+        1. Add the apple and the salt at a proper position on the table.
+        2. Add the mouseover and mouseout effect like lemon and vinegar on apple and salt.
+      */
+      const lemonGrey = document.getElementsByClassName('lemon_grey')[0];
+      lemonGrey.style.display = 'none';
+      function handleLemonMouseOver(event) {
+        lemonGrey.style.display = '';
+      }
+      function handleLemonMouseOut(event) {
+        lemonGrey.style.display = 'none';
+      }
+
+      const vinegarGrey = document.getElementsByClassName('vinegar_grey')[0];
+      vinegarGrey.style.display = 'none';
+      function handleVinegarMouseOver(event) {
+        vinegarGrey.style.display = '';
+      }
+      function handleVinegarMouseOut(event) {
+        vinegarGrey.style.display = 'none';
+      }
+    </script>
+  </body>
+</html>

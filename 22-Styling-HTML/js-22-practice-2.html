@@ -44,11 +44,11 @@
             for cell 6 update its image to number-6_Down.png and background color to #4a05a6.
             for cell 8 update its image to number-8_Down.png and background color to #513930.
 
-          2. Show the congrats page after 1s(setTimeout()). Class congrats specify the style of congrats page and is in style.css already.
+          2. Add class congrats on <div id="congrats-page"></div> (line 37) after 2s.
         */
         const cells = document.getElementsByTagName('td');
         const numInput = document.getElementById('numInput');
-        const bodyCover = /* Get the div with id "congrats-page" */
+        const congratsPage = /* Get the <div> with id "congrats-page" */
         const correctInput = '368';
         const downColors = {
           num3: '#d48107',
@@ -59,11 +59,11 @@
         function handleSubmit() {
           if (numInput.value === correctInput) {
             for (const cell of cells) {
-              /* Your code goes here */
+              /* 1. Update the cell 3, 6 and 8's style here */
             }
 
             setTimeout(() => {
-              /* Show the congrats page */
+              /* 2. Add class congrats */
             }, 2000);
           }
         }
