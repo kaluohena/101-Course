@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Events</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <body>
+      <div>
+        <form onsubmit="handleSubmit(event)">
+          <div class="label">
+            Input three numbers that you think is the wrong colour
+          </div>
+          <input id="numInput" type="number" /><br />
+          <input type="submit" value="Submit" />
+        </form>
+        <table id="table">
+          <tr>
+            <td data="1"></td>
+            <td data="2"></td>
+            <td data="3"></td>
+          </tr>
+          <tr>
+            <td data="4"></td>
+            <td data="5"></td>
+            <td data="6"></td>
+          </tr>
+          <tr>
+            <td data="7"></td>
+            <td data="8"></td>
+            <td data="9"></td>
+          </tr>
+        </table>
+        <div id="congrats-page" class="cover_none">
+          <div class="congrats-text"></div>
+          <div class="congrats-image">
+            <img src="../assets/color-paper.gif" />
+          </div>
+        </div>
+        <div id="wrong-page" class="cover_none">
+          <div class="wrong-text">Oops</div>
+          <div class="wrong-image"></div>
+        </div>
+      </div>
+
+      <script>
+        // The page will flash when user input the number first time try to solve it.
+        const cells = document.getElementsByTagName('td');
+        const numInput = document.getElementById('numInput');
+        const congratsPage = document.getElementById('congrats-page');
+        const wrongPage = document.getElementById('wrong-page');
+        const correctInput = '368';
+        const downColors = {
+          num3: '#d48107',
+          num6: '#4a05a6',
+          num8: '#513930',
+        };
+
+        function handleSubmit(event) {
+          if (numInput.value === correctInput) {
+            for (const cell of cells) {
+              const cellData = cell.getAttribute('data');
+              if (cell.getAttribute('data') === '3') {
+                cell.style.backgroundImage = `url("../assets/number-3_Down.png")`;
+                cell.style.backgroundPosition = 'center 55%';
+                cell.style.backgroundColor = '#d48107';
+              }
+              if (cell.getAttribute('data') === '6') {
+                cell.style.backgroundImage = `url("../assets/number-6_Down.png")`;
+                cell.style.backgroundPosition = 'center 55%';
+                cell.style.backgroundColor = '#4a05a6';
+              }
+              if (cell.getAttribute('data') === '8') {
+                cell.style.backgroundImage = `url("../assets/number-8_Down.png")`;
+                cell.style.backgroundPosition = 'center 55%';
+                cell.style.backgroundColor = '#513930';
+              }
+            }
+
+            setTimeout(() => {
+              congratsPage.style.display = 'flex';
+            }, 1000);
+          } else {
+            wrongPage.style.display = 'flex';
+          }
+        }
+      </script>
+    </body>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form</title>
+  </head>
+
+  <form>
+    <input type="radio" name="age" value="10" />1 ~ 10<br />
+    <input type="radio" name="age" value="20" />11 ~ 20<br />
+  </form>
+
+  <script>
+    let form = document.forms[0];
+
+    let ageElems = form.elements.age;
+
+    alert(ageElems[0]); // [object HTMLInputElement]
+  </script>
+</html>
