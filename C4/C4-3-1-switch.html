@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The "switch" statement</title>
+    <script>
+      // Ask the user to input the difficult level.
+      // If the difficult level is 1 (By default) then user has 3 times to guess.
+      // If the difficult level is 2 (By default) then user has 2 times to guess.
+      // If the difficult level is 3 (By default) then user has 0 times to guess.
+
+      let secretNumber = Math.floor(Math.random() * (100 - 0) + 1);
+      let number = 0;
+      let guesses = 0;
+      // 'Please input the level of difficulty'
+
+      do {
+        let hint;
+        number = prompt('Please input a number');
+        guesses++;
+
+        if (number > secretNumber) {
+          hint = 'The number is larger than the secret number.';
+        } else if (number < secretNumber) {
+          hint = 'The number is less than the secret number.';
+        } else {
+          hint = `Bravo! you're correct after ${guesses} guess(es).`;
+        }
+
+        alert(hint);
+      } while (number != secretNumber);
+    </script>
+  </head>
+
+  <body></body>
+</html>
