@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C1 - project</title>
+    <script>
+      // Ask user to input name and show "Welcome <user name> to the escape name."
+      setTimeout(() => {
+        // Add your code here.
+
+        const doorImage = document.getElementsByTagName('img')[0];
+        doorImage.setAttribute('src', '../assets/door-open.jpg');
+        doorImage.style.transform = 'translate(-56%, -50%)';
+      }, 100);
+    </script>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        position: fixed;
+      }
+      .wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <img src="../assets/door-close.jpg" alt="closed door" height="700" />
+    </div>
+  </body>
+</html>
