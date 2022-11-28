@@ -23,6 +23,7 @@
         // Copy the following code under the line of alert('Welcome!');
         // const doorImage = document.getElementsByTagName('img')[0];
         // doorImage.setAttribute('src', '../assets/door-open.jpg');
+        // doorImage.style.transform = 'translate(-56%, -50%)';
       }, 100);
     </script>
     <style>
@@ -35,9 +36,12 @@
       .wrapper {
         width: 100%;
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      }
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
       }
     </style>
   </head>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Logical operators</title>
+    <title>C3 - project</title>
     <script>
       /*
         Write the code which asks for a login with prompt.
@@ -19,12 +19,38 @@
 
         Please use nested if blocks. Mind the overall readability of the code.
         Hint: passing an empty input to a prompt returns an empty string ''. Pressing ESC during a prompt returns null.
-
-        Please refer the flow chart on slide 69
       */
-      let userName;
+      setTimeout(() => {
+        // Your code should go here.
+        // Copy the following code under the line of alert('Welcome!');
+        // const doorImage = document.getElementsByTagName('img')[0];
+        // doorImage.setAttribute('src', '../assets/door-open.jpg');
+        // doorImage.style.transform = 'translate(-56%, -50%)';
+      }, 100);
     </script>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        position: fixed;
+      }
+      .wrapper {
+        width: 100%;
+        height: 100%;
+      }
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
   </head>
 
-  <body></body>
+  <body>
+    <div class="wrapper">
+      <img src="../assets/door-close.jpg" alt="closed door" height="700" />
+    </div>
+  </body>
 </html>
